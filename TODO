@@ -1,1 +1,20 @@
-Store and load breakpoints between sessions
+scratchbuf
+- [ ] docs: set logging file in gdb
+- [ ] docs: load logging file into buffer
+- [ ] docs: scratch buffer
+
+- [ ] source gdb_show_all_cmds.py
+- [ ] config option for string send to gdb
+      * default:
+        - server pipe show all-commands | sed -e 's/[[:space:]]\+[0-9]\+[[:space:]]\+//' | head -n -1 > /tmp/gdb_allcmds
+
+commands
+- [ ] :e $HOME/.local/share/nvim-gdb/abspath_to_project based on cwd expanded
+      * https://vi.stackexchange.com/questions/38944/how-to-to-get-commmand-completions-for-selection-from-a-keymap
+      * https://stackoverflow.com/questions/14489320/how-to-expand-function-arguments-in-vim-command-line
+      * Or is opening and modifying (+update) an index file more optimal?
+- [ ] :GdbStartLogging [optional filepath, --file means $HOME/.local/share/nvim-gdb/abspath_to_project/file]
+- [ ] :GdbStopLogging
+- [ ] :GdbShowAllCmd
+      * print current complete gdb history into buffer under cursor
+      * better naming?
